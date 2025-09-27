@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link rel="icon" href="assets/favicon.ico" type="image/x-icon" /> -->
+    <link rel="icon" href="assets/favicon.png" type="image/png" />
+
+    <title>EMR - Portfolio</title>
+
+    <link
+      rel="preload"
+      href="assets/data.json"
+      as="fetch"
+      type="application/json"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+
+  <body id="page">
+    <header>
+      <div class="header-container">
+        <div class="palestine"></div>
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/header/logo.jpeg" alt="emr-logo" />
+          </a>
+        </div>
+
+        <nav>
+          <ul>
+            <li style="--ml: 6rem" class="active">
+              <a href="#profile" data-nav="Profile" aria-label="Profile"
+                ><span></span
+              ></a>
+            </li>
+            <li style="--ml: 0rem">
+              <a href="#education" data-nav="Education" aria-label="Education"
+                ><span></span
+              ></a>
+            </li>
+            <li style="--ml: 6rem">
+              <a href="#skills" data-nav="Skills" aria-label="Skills"
+                ><span></span
+              ></a>
+            </li>
+            <li style="--ml: 0rem">
+              <a href="#projects" data-nav="Projects" aria-label="Projects"
+                ><span></span
+              ></a>
+            </li>
+            <li style="--ml: 6rem">
+              <a href="#contacts" data-nav="Contacts" aria-label="Contacts"
+                ><span></span
+              ></a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="menu">
+          <div class="burger">
+            <span></span>
+          </div>
+          <input
+            id="menu"
+            type="checkbox"
+            class="toggle-menu"
+            aria-label="Toggle menu"
+          />
+        </div>
+
+        <div class="options">
+          <div class="theme">
+            <input
+              id="theme"
+              type="checkbox"
+              class="toggle-theme"
+              aria-label="Toggle theme"
+            />
+          </div>
+          <select
+            class="lang"
+            name="lang"
+            id="lang"
+            aria-label="Change language"
+          >
+            <option value="En">En</option>
+            <option value="Ar">Ar</option>
+          </select>
+        </div>
+        <div class="scroll"></div>
+      </div>
+    </header>
+
+    <main>
+      <section class="profile" id="profile">
+        <h1><span>Mohammad</span><span>Ragab</span></h1>
+
+        <div class="cv">
+          <h3 data-first="Software Engineer" data-second="Frontend Developer">
+            I am a&nbsp;
+          </h3>
+          <div>
+            <a href="assets/Mohammad-Ragab-CV.pdf" target="_blank">CV</a>
+            <a href="assets/Mohammad-Ragab-CV.pdf" download="">
+              <img src="assets/main/download.png" alt="Download" />
+            </a>
+          </div>
+          <!-- href="https://drive.google.com/drive/folders/1KP-L0wyX79Q3XOZJFPFPXv-2jTGAIGii" -->
+        </div>
+
+        <p>
+          A frontend developer proficient in developing pixel-perfect and
+          responsive web applications and sites using modern technologies, keeps
+          up with the new in the field, and thrives on challenges.
+        </p>
+
+        <div class="social">
+          <a href="mailto:mohammad01ragab@gmail.com">
+            <img src="assets/main/gmail.svg" alt="G-mail" />
+          </a>
+          <a href="https://github.com/E0MR" target="_blank">
+            <img src="assets/main/github.svg" alt="GitHub" />
+          </a>
+          <a href="https://linkedin.com/in/mohammad01ragab" target="_blank">
+            <img src="assets/main/linkedin.svg" alt="LinkedIn" />
+          </a>
+          <a href="https://wa.me/+201129691439" target="_blank">
+            <img src="assets/main/whatsapp.svg" alt="WhatsApp" />
+          </a>
+        </div>
+
+        <div class="emr">
+          <div class="img">
+            <div class="inner-img"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="education" id="education">
+        <h2>Education</h2>
+        <h3>Courses & Certificates</h3>
+
+        <div class="edu">
+          <div class="college">
+            <img
+              src="assets/main/learning.png"
+              alt="Ain Shams"
+              usemap="#ainShams"
+            />
+            <map name="ainShams">
+              <area
+                shape="rect"
+                coords="85,20,235,30"
+                alt="Ain Shams University"
+                href="https://www.asu.edu.eg/en/"
+                target="_blank"
+              />
+              <area
+                shape="rect"
+                coords="75,40,245,50"
+                alt="Faculty of Engineering"
+                href="https://eng.asu.edu.eg/"
+                target="_blank"
+              />
+            </map>
+
+            <div>
+              <b>2024</b>
+              <p>Bachelor's Degree . CSE - Computer and System Engineering</p>
+              <p>Software Engineer | Front End Developer - ReactJS</p>
+            </div>
+
+            <a
+              href="https://drive.google.com/drive/folders/165KOFY2e97pd40xTiszE_D-onu3o0LcM"
+              target="_blank"
+            >
+              View all my Courses & Certificates
+            </a>
+          </div>
+
+          <div class="coursera">
+            <img src="assets/main/coursera.svg" alt="coursera" />
+            <div class="course">
+              <div class="img">
+                <img
+                  loading="lazy"
+                  src="assets/main/education/MetaFront-EndDeveloper.jpg"
+                  alt="Certificate"
+                />
+                <a
+                  href="https://drive.google.com/file/d/16AMbqZw_IZG2nYoorUDCoYTVm1gjB0Oi/view?usp=drivesdk"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/main/download.png"
+                    alt="download-certificate"
+                  />
+                </a>
+              </div>
+
+              <h3>Meta Front-End Developer</h3>
+
+              <a
+                href="https://www.coursera.org/professional-certificates/meta-front-end-developer"
+                target="_blank"
+              >
+                Course link
+              </a>
+            </div>
+          </div>
+
+          <div class="udemy">
+            <img src="assets/main/udemy.svg" alt="udemy" />
+            <div class="course">
+              <div class="img">
+                <img
+                  loading="lazy"
+                  src="assets/main/education/FrontEndWebDevelopmentUltimateGuide.jpg"
+                  alt="Certificate"
+                />
+                <a
+                  href="https://drive.google.com/file/d/16E28lpUJ6HdRr8nwS9x-UReYEGgR_Vqz/view?usp=drivesdk"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/main/download.png"
+                    alt="download-certificate"
+                  />
+                </a>
+              </div>
+
+              <h3>Front End Web Development Ultimate Guide</h3>
+
+              <a href="">Course link</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="skills" id="skills">
+        <h2>Skills</h2>
+        <div>
+          <div class="skills-container">
+            <div
+              class="soft"
+              id="soft"
+              data-type="&#129504; Soft Skills &#129504;"
+            ></div>
+            <div
+              class="technical"
+              id="technical"
+              data-type="&#128187; Technical Skills &#128187;"
+            ></div>
+          </div>
+          <div class="technologies">
+            <img src="assets/main/skills.png" alt="skills" />
+            <div
+              id="technologies"
+              data-type="&#129520; Technologies &#129520;"
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <h2>Projects</h2>
+        <div class="slider-wrapper">
+          <div class="container" id="slider"></div>
+          <div class="controls">
+            <button id="prev" type="button">&#10094;</button>
+            <button id="next" type="button">&#10095;</button>
+          </div>
+          <a href="#">View all my Projects</a>
+        </div>
+      </section>
+
+      <section class="contacts" id="contacts">
+        <h2>Contacts</h2>
+        <div>
+          <a
+            href="https://github.com/E0MR"
+            target="_blank"
+            style="--x: -1; --y: -1; --d: 1"
+          >
+            <img src="assets/main/github.svg" alt="github" />
+          </a>
+          <a
+            href="mailto:mohammad01ragab@gmail.com"
+            target="_blank"
+            style="--x: 0; --y: -1; --d: 0"
+          >
+            <img src="assets/main/gmail.svg" alt="gmail" />
+          </a>
+          <a
+            href="https://linkedin.com/in/mohammad01ragab"
+            target="_blank"
+            style="--x: 1; --y: -1; --d: 2"
+          >
+            <img src="assets/main/linkedin.svg" alt="linkedin" />
+          </a>
+          <a
+            href="https://wa.me/+201129691439"
+            target="_blank"
+            style="--x: -1; --y: 0; --d: 1"
+          >
+            <img src="assets/main/whatsapp.svg" alt="whatsapp" />
+          </a>
+
+          <a href="#" style="--x: 0; --y: 0; --d: 0" class="close-contacts">
+            <input id="contact" type="checkbox" aria-label="Contact menu" />
+          </a>
+
+          <a href="#" target="_blank" style="--x: 1; --y: 0; --d: 2">
+            <img src="assets/main/telegram.svg" alt="telegram" />
+          </a>
+          <a href="#" target="_blank" style="--x: -1; --y: 1; --d: 1">
+            <img src="assets/main/x-twitter.svg" alt="x-twitter" />
+          </a>
+          <a href="#" target="_blank" style="--x: 0; --y: 1; --d: 2">
+            <img src="assets/main/instagram.svg" alt="instagram" />
+          </a>
+          <a href="#" target="_blank" style="--x: 1; --y: 1; --d: 1">
+            <img src="assets/main/facebook.svg" alt="facebook" />
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      Copyright &copy; <span id="year">ok</span> <b>EMR</b>
+
+      <div class="scroll-top" id="goTop">
+        <span>&#10153;</span>
+      </div>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+  </body>
+</html>
