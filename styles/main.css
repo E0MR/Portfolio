@@ -836,7 +836,7 @@ main {
         .close-contacts {
           background-image: url(../assets/main/close.svg);
           background-size: cover;
-          z-index: var(--top-layer);
+          z-index: var(--layer3);
         }
 
         &:has(:checked) {
