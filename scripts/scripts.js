@@ -1,3 +1,5 @@
+import emr from "./data.js";
+
 const year = document.getElementById("year");
 const goTop = document.getElementById("goTop");
 let theme = document.getElementById("theme");
@@ -33,30 +35,6 @@ window.onload = () => {
     }
   }
 };
-
-// const sections = document.querySelectorAll("main section");
-// const navLis = document.querySelectorAll("nav ul li");
-// window.addEventListener("scroll", () => {
-//   let currentSectionId = "";
-
-//   sections.forEach((section) => {
-//     const sectionTop = section.offsetTop;
-//     const sectionHeight = section.offsetHeight;
-
-//     if (pageYOffset >= sectionTop - sectionHeight / 3) {
-//       currentSectionId = section.getAttribute("id");
-//     }
-//   });
-
-//   navLis.forEach((li) => {
-//     li.classList.remove("active");
-
-//     const a = li.querySelector("a");
-//     if (a.getAttribute("href") === `#${currentSectionId}`) {
-//       li.classList.add("active");
-//     }
-//   });
-// });
 
 const sections = document.querySelectorAll("main section");
 const navLis = document.querySelectorAll("nav ul li");
@@ -98,23 +76,11 @@ window.addEventListener("DOMContentLoaded", () => {
   fetchData();
 });
 
-async function fetchData() {
-  const url = "../assets/data.json";
-  try {
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
-    }
+function fetchData() {
+  const { soft, technical, technologies } = emr.skills;
+  renderSkills(soft, technical, technologies);
 
-    const result = await response.json();
-
-    const { soft, technical, technologies } = result.skills;
-    renderSkills(soft, technical, technologies);
-
-    renderProjects(result.projects);
-  } catch (error) {
-    console.error(error.message);
-  }
+  renderProjects(emr.projects);
 }
 
 function renderSkills(softSkills, technicalSkills, technologies) {
