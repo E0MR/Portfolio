@@ -238,7 +238,7 @@ main {
 
       .edu {
         position: relative;
-        min-height: 65vh;
+        min-height: 50vh;
 
         margin: 1rem;
         margin-top: 2.5rem;
@@ -271,7 +271,7 @@ main {
           }
 
           div {
-            margin: 1rem 0 1.5rem;
+            margin: 1rem 1rem 1.5rem;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -660,9 +660,11 @@ main {
               img {
                 width: 100%;
                 cursor: progress;
+                aspect-ratio: 4 / 3;
+                object-fit: cover;
 
                 &:hover {
-                  content: url("../assets/main/projects/FrontendMentor.gif");
+                  content: var(--gif);
                 }
               }
             }
@@ -733,7 +735,7 @@ main {
           width: 100%;
           top: 50%;
           transform: translateY(-50%);
-          z-index: var(--top-layer);
+          z-index: var(--layer3);
           display: flex;
           align-items: center;
           justify-content: space-between;
@@ -868,9 +870,6 @@ main {
 @media (min-width: 768px) {
   main {
     section {
-      padding-bottom: 0;
-      height: calc(100vh - 11rem);
-
       h2 {
         &::before {
           width: 20rem;
@@ -945,6 +944,9 @@ main {
 @media (min-width: 992px) {
   main {
     section {
+      padding-bottom: 0;
+      height: calc(100vh - 11rem);
+
       &.profile {
         .cv {
           h3 {

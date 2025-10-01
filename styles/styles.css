@@ -426,10 +426,13 @@ header {
 }
 
 footer {
-  background-color: var(--shadow);
+  /* background-color: var(--shadow); */
   text-align: center;
   padding: 2.5rem 0;
   font-size: 2rem;
+  /* position: absolute;
+  left: 0;
+  right: 0; */
 
   .scroll-top {
     position: fixed;
@@ -450,6 +453,7 @@ footer {
     cursor: pointer;
     -webkit-user-select: none;
     user-select: none;
+    z-index: var(--top-layer);
 
     span {
       display: inline-block;

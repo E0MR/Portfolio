@@ -129,7 +129,7 @@ function renderProjects(projects) {
           loading="lazy"
           src="${img}" 
           alt="${img.split("/").pop().split(".")[0]}" 
-          style="--gif: '${img.replace(".png", ".gif")}'">
+          style="--gif: url(.${img.replace(".png", ".gif")})">
       </div>
       <h3>${name}</h3>
       <p>${technologies.join(", ")}</p>
