@@ -78,12 +78,12 @@ main {
         align-items: center;
         justify-content: space-between;
         font-family: monospace;
+        z-index: var(--layer3);
 
         h3 {
           position: relative;
-          font-size: 1.5rem;
+          font-size: 2rem;
           white-space: nowrap;
-          z-index: var(--layer2);
 
           &::after {
             display: inline-block;
@@ -243,18 +243,18 @@ main {
         margin: 1rem;
         margin-top: 2.5rem;
         border-radius: 1rem;
-        overflow: hidden;
         filter: drop-shadow(0 0 0.5rem var(--shadow));
 
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
         & > div {
-          position: absolute;
-          top: 0;
-          left: 0;
           width: 100%;
-          height: 100%;
+          height: 25rem;
           background-color: var(--body-bg-col);
           transition: var(--transition);
-          z-index: var(--layer1);
+          border-radius: 1rem;
         }
 
         .college {
@@ -263,12 +263,6 @@ main {
           justify-content: center;
           flex-direction: column;
           gap: 1rem;
-          clip-path: polygon(50% 0, 50% 0, 95% 100%, 5% 100%);
-
-          &:hover {
-            z-index: var(--layer2);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          }
 
           div {
             margin: 1rem 1rem 1.5rem;
@@ -304,9 +298,11 @@ main {
 
         .coursera,
         .udemy {
+          position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
+          padding: 1rem;
 
           & > img {
             position: absolute;
@@ -317,13 +313,13 @@ main {
             padding: 1rem;
             border-radius: 0.75rem;
             background-color: white;
-            box-shadow: 0 0 0.5rem var(--shadow), 0 0 0.5rem var(--shadow) inset;
+            box-shadow: 0 0 0.5rem var(--gray);
           }
 
           .course {
             position: relative;
             width: 25rem;
-            height: 80%;
+            height: 100%;
             border-radius: 0.75rem;
             overflow: hidden;
             /* border: 1px solid black; */
@@ -331,14 +327,12 @@ main {
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            padding-bottom: 2.5rem;
-            transform: scale(0.5);
-            transition: var(--transition);
 
             .img {
               position: relative;
               border-radius: 0.75rem;
               border: 0.5rem groove var(--gray);
+              width: 60%;
 
               img {
                 width: 100%;
@@ -408,38 +402,14 @@ main {
         }
 
         .coursera {
-          clip-path: polygon(0 0, 45% 0, 45% 0, 0 100%);
-
-          &:hover {
-            z-index: var(--layer2);
-            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-
-            .course {
-              transform: scale(1);
-            }
-          }
-
           & > img {
             left: 1rem;
-            cursor: se-resize;
           }
         }
 
         .udemy {
-          clip-path: polygon(100% 0, 100% 100%, 55% 0, 55% 0);
-
-          &:hover {
-            z-index: var(--layer2);
-            clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
-
-            .course {
-              transform: scale(1);
-            }
-          }
-
           & > img {
             right: 1rem;
-            cursor: sw-resize;
           }
         }
       }
@@ -491,18 +461,23 @@ main {
               top: -2.5rem;
               transform: translateX(-50%);
               font-weight: 900;
+              background-color: var(--shadow);
+              border-radius: 1rem;
+              padding: 0.125rem;
             }
           }
         }
 
         .technologies {
           flex: 1;
+          margin: 0 auto;
           margin-top: 2.5rem;
           padding-top: 2.5rem;
           display: flex;
           align-items: center;
           justify-content: center;
           position: relative;
+          width: 80%;
 
           img {
             position: absolute;
@@ -530,6 +505,9 @@ main {
               top: -2.5rem;
               transform: translateX(-50%);
               font-weight: 900;
+              background-color: var(--shadow);
+              border-radius: 1rem;
+              padding: 0.25rem;
             }
 
             .tech {
@@ -782,6 +760,7 @@ main {
           border-radius: 0.5rem;
           box-shadow: 0 0 0.5rem var(--gray);
           transition: var(--transition);
+          margin-top: 1rem;
 
           &:hover {
             background-color: var(--shadow);
@@ -950,7 +929,7 @@ main {
       &.profile {
         .cv {
           h3 {
-            font-size: 2.5rem;
+            font-size: 2.25rem;
           }
         }
         .emr {
@@ -958,6 +937,80 @@ main {
             .inner-img {
               width: 30rem;
               height: 30rem;
+            }
+          }
+        }
+      }
+
+      &.education {
+        .edu {
+          overflow: hidden;
+          display: block;
+
+          & > div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            z-index: var(--layer1);
+          }
+
+          .college {
+            clip-path: polygon(50% 0, 50% 0, 95% 100%, 5% 100%);
+
+            &:hover {
+              z-index: var(--layer2);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+          }
+
+          .coursera,
+          .udemy {
+            position: absolute;
+
+            .course {
+              transform: scale(0.5);
+              transition: var(--transition);
+
+              .img {
+                width: 100%;
+              }
+            }
+          }
+
+          .coursera {
+            clip-path: polygon(0 0, 45% 0, 45% 0, 0 100%);
+
+            &:hover {
+              z-index: var(--layer2);
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+              .course {
+                transform: scale(1);
+              }
+            }
+
+            & > img {
+              left: 1rem;
+              cursor: se-resize;
+            }
+          }
+
+          .udemy {
+            clip-path: polygon(100% 0, 100% 100%, 55% 0, 55% 0);
+
+            &:hover {
+              z-index: var(--layer2);
+              clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+
+              .course {
+                transform: scale(1);
+              }
+            }
+
+            & > img {
+              right: 1rem;
+              cursor: sw-resize;
             }
           }
         }

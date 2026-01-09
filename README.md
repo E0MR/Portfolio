@@ -1,5 +1,13 @@
 # EMR Portfolio
 
-* https://e0mr.github.io/Portfolio/index.html
+## Live Preview
+- https://e0mr.github.io/Portfolio/index.html
 
-    - HTML, CSS, JS
+## Technologies
+- HTML
+- CSS
+- JavaScript
+
+## ToDo
+- Arabic "language" 
+- Animations
