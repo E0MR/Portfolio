@@ -430,11 +430,12 @@ main {
           justify-content: center;
           flex-direction: column;
           gap: 5rem;
+          padding: 1rem;
           padding-top: 2.5rem;
 
           div {
             position: relative;
-            width: 80%;
+            width: 100%;
             margin: 0 auto;
             display: flex;
             flex-wrap: wrap;
@@ -470,14 +471,13 @@ main {
 
         .technologies {
           flex: 1;
-          margin: 0 auto;
           margin-top: 2.5rem;
+          padding: 1rem;
           padding-top: 2.5rem;
           display: flex;
           align-items: center;
           justify-content: center;
           position: relative;
-          width: 80%;
 
           img {
             position: absolute;
@@ -913,7 +913,7 @@ main {
       &.skills {
         & > div {
           flex-direction: row;
-          height: 90%;
+          height: 100%;
         }
       }
     }
